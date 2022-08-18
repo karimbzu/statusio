@@ -1,0 +1,3 @@
+sb.assuresign.net
+au-sandbox.assuresign.net
+dev-account.assuresign.net

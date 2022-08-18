@@ -1,0 +1,13 @@
+parameters:
+- name: ServiceConnectionName
+  type: string
+steps:
+- task: UsePythonVersion@0
+  inputs:
+    versionSpec: '3.9.x'
+  displayName: 'Use Python 3.9.x'
+- script: |
+    pip install numpy
+    pip install requests
+    python templates/statusio/start.py  ${{ parameters.ServiceConnectionName }}
+  displayName: 'environment name'
